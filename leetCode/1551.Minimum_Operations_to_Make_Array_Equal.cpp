@@ -19,6 +19,20 @@ Example 2:
 
 Input: n = 6
 Output: 9
+
+most importain link is https://leetcode.ca/2020-02-28-1551-Minimum-Operations-to-Make-Array-Equal/#:~:text=Minimum%20Operations%20to%20Make%20Array%20Equal%20(Medium),%5By%5D%20%2B%3D%201%20).
+
+https://leetcode.ca/2020-02-28-1551-Minimum-Operations-to-Make-Array-Equal/#:~:text=Minimum%20Operations%20to%20Make%20Array%20Equal%20(Medium),%5By%5D%20%2B%3D%201%20).
+class Solution {
+public:
+    int minOperations(int n) {
+        int ans = 0;
+        for (int i = 0; i < n >> 1; ++i) {
+            ans += n - (i << 1 | 1);
+        }
+        return ans;
+    }
+};
 */
 class Solution {
 public:
@@ -61,4 +75,24 @@ public:
         return ( n/2 ) * ( n - (n/2));
     }
 }; 
+
+class Solution {
+public:
+    int minOperations(int n) {
+   
+     
+      // just write the series fro n=1 to n==6;
+      //notice the mid elemnt is equal to n for every series
+      // try to make every element equal to the mid element (which will be n)
+      //and  that diffeerence will be a series of odd numbers
+      //and calculate the sum of this series 
+       // and sum of m odd numbers is m*m 
+       
+                 // if n is even then      //if n is odd
+      
+      return (n%2==0) ? (n/2)*(1ll)*(n/2) :  ((n/2)+1)*(1ll)*(n/2);
+
+
+    }
+};
 */
